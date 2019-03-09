@@ -15,7 +15,7 @@ struct Node{
 }*head=NULL;
 
 void addBeginning(int input){
-  struct Node* newNode;
+  struct Node *newNode;
   newNode = (struct Node*)(malloc(sizeof(struct Node)));
   newNode->data = input;
   if(head==NULL)
@@ -31,7 +31,7 @@ void addBeginning(int input){
 }
 
 void addEnd(int input){
-  struct Node* newNode;
+  struct Node *newNode;
   newNode = (struct Node*)(malloc(sizeof(struct Node)));
   newNode->next = NULL;
   newNode->data = input; 
@@ -43,17 +43,35 @@ void addEnd(int input){
   {
     struct Node *aux = newNode;
     aux=head;
-    while(aux!=NULL)
+    while(aux->next!=NULL)
     {
       aux = aux->next;
-      aux->next = newNode;
     }
+    aux->next = newNode;
   }
   printf("Changed!");
 }
 
-void addPosition(int input, int position){
-
+void addPosition(int input, int pos){
+  struct Node *newNode;
+  newNode = (Struct Node*)(malloc(sizeof(struct Node)));
+  newNode->data = input;
+  struct Node *aux = head;
+  if(head==NULL)
+  {
+    newNode->next=NULL
+    head = newNode;
+  }
+  else
+  {
+    for(int i=0; i < pos - 1;i++)
+    {
+      aux = aux->next;
+    }
+    newNode->next = aux->next;
+    aux->next = newNode;
+  }
+  printf("Done!");
 }
 
 void removeBeginning(){
