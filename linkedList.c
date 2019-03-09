@@ -13,10 +13,10 @@ struct Node{
   struct Node *next;
 }*head=NULL;
 
-void addBeginning(int value){
+void addBeginning(int input){
   struct Node* newNode;
   newNode = (struct Node*)(malloc(sizeof(struct Node)));
-  newNode->data = value;
+  newNode->data = input;
   if(head==NULL)
   {
     newNode->next = NULL;
@@ -29,11 +29,29 @@ void addBeginning(int value){
   printf("Changed!");
 }
 
-void addEnd(int value){
-
+void addEnd(int input){
+  struct Node* newNode;
+  newNode = (struct Node*)(malloc(sizeof(struct Node)));
+  newNode->next = NULL;
+  newNode->data = input; 
+  if(head=NULL)
+  {
+    head=newNode;
+  }
+  else
+  {
+    struct Node *aux = newNode;
+    aux=head;
+    while(aux!=NULL)
+    {
+      aux = aux->next;
+      aux->next = newNode;
+    }
+  }
+  printf("Changed!");
 }
 
-void addPosition(int value, int position){
+void addPosition(int input, int position){
 
 }
 
