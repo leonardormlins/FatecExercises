@@ -75,7 +75,26 @@ void addPosition(int input, int pos){
 }
 
 void removeBeginning(){
-
+  if (head==NULL)
+  {
+    printf("Failed!Empty list.");
+  }
+  else
+  {
+    struct Node *aux=head;
+    if(head->next==NULL)
+    {
+      head=NULL;
+      free(aux);
+      printf("Done!);
+    }
+    else
+    {
+      head=aux->prox;
+      free(aux);
+      printf("Done!);
+    }
+  }
 }
 
 void removeEnd(){
