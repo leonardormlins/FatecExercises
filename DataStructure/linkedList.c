@@ -98,7 +98,29 @@ void removeBeginning(){
 }
 
 void removeEnd(){
-
+  if(head==NULL)
+  {
+    printf("The list is empty!");
+  }
+  else
+  {
+    struct Node *aux1=head, aux2; 
+    if(head->next==NULL)
+    {
+      head=NULL;
+    }
+    else
+    {
+      while(aux1->next!=NULL)
+      {
+        aux2=aux1;
+        aux1=aux1->next;
+      }
+      aux2->next=NULL;
+    }
+    free(aux1);
+    printf("Done!");
+  }
 }
 
 void removePosition(int pos){
