@@ -128,7 +128,12 @@ void removePosition(int pos){
 }
 
 void displayList(){
-
+  struct Node *aux=head;
+  while(aux->next!=NULL)
+  {
+    printf(head->data);
+    aux=aux->next;
+  }
 }
 
 int main(){
