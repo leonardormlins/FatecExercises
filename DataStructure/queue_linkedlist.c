@@ -14,5 +14,10 @@ struct Node{
 }*head=NULL;
 
 void add(Node**i, Node**t, int x){
-  
+  Node *new = (struct Node*) malloc(sizeof(struct Node));
+  new->data = x;
+  new->next = NULL;
+  if(*i==NULL) *i=new;
+  else *t->prox=new;
+  *t=new;
 }
