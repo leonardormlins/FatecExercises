@@ -134,6 +134,7 @@ void displayList(){
     printf(head->data);
     aux=aux->next;
   }
+  printf(aux->data);
 }
 
 int main(){
