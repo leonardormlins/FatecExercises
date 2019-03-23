@@ -123,8 +123,8 @@ void removeEnd(){
   }
 }
 
-void removePosition(int pos){
-
+void removePosition(int pos, struct Node *targ){
+  struct Node *newCel = (struct Node*) malloc(sizeof(struct Node));
 }
 
 void displayList(){
