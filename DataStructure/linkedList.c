@@ -9,10 +9,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Node{
+typedef struct node{
   int data;
-  struct Node *next;
-}*head=NULL;
+  struct node *next;
+}Node;
 
 void addBeginning(int input){
   struct Node *newNode;
