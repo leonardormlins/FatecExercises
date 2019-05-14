@@ -2,8 +2,8 @@
 
 typedef struct no{
   int valor;
-  struct no* direita;
-  struct no* esquerda;
+  struct no *direita;
+  struct no *esquerda;
 }No;
 
 int alturaArvore(No *raiz){
